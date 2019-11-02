@@ -1,0 +1,9 @@
+{
+  "askenEmail": "<your asken email address",
+  "askenPass": "<your asken login password",
+  "startDate": "<start date of asken socre you want to record, e.g. 20190929>",
+  "endDate": "<end date of asken socre you want to record, e.g. 20191003>",
+  "pixelaUser": "<your pixela user id>",
+  "pixelaGraphId": "<your pixela graph for recording asken score",
+  "pixelaToken": "<your pixela user token>"
+}
