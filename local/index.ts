@@ -44,7 +44,7 @@ const askenUrl = 'http://asken.jp/login';
         const pHref = p.getAttribute('href');
 
         if (pText != null && pHref != null) {
-          const quantity = pText.replace(/点/g, '');
+          const quantity = pText.replace(/\u70B9/g, '');
           const date = pHref.substr(pHref.length - 10).replace(/-/g, '');
 
           if (date < config.startDate || config.endDate < date) {
