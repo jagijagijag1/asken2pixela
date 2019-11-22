@@ -49,7 +49,6 @@ app.get('/', async (req, res) => {
   }
 
   // collect yesterday's point (expected `page.$$eval` returns only one element)
-  // TODO point が undefinedになってるっぽくてうまく動作しない…
   const points: Pixel[] = await page.$$eval('.point_link', (pl, yesterday) => {
     return pl.map(p => {
       // actual score is in text content and date info is in href attribute
@@ -113,11 +112,6 @@ function yesterdayString(): string {
     const yyyy = dateObj.getFullYear();
     const MM = ('0' + (dateObj.getMonth() + 1)).slice(-2)
     const dd = ('0' + dateObj.getDate()).slice(-2) 
-
-    const hh = ('0' + dateObj.getHours()).slice(-2) 
-    const mm = ('0' + dateObj.getMinutes()).slice(-2) 
-    const ss = ('0' + dateObj.getSeconds()).slice(-2) 
-    console.log(yyyy + MM + dd + ' ' + hh + ':' + mm + ':' + ss)
 
     return yyyy + MM + dd;
 }
