@@ -1,0 +1,23 @@
+{
+  "name": "asken2pixela-cloudrun",
+  "version": "1.0.0",
+  "description": "asken2pixela on GCP Cloud Run",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc -p . && node .",
+    "build": "tsc -p .",
+    "server": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "puppeteer": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/puppeteer": "^1.20.2",
+    "typescript": "^3.7.2"
+  }
+}
